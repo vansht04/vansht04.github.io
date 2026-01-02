@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vansh Tejnani | Software Engineer</title>
+  <title>Vansh Tejnani | Portfolio</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="assets/favicon.png" type="image/png">
 </head>
@@ -15,64 +15,97 @@
       <img src="assets/logo.png" alt="Logo" class="logo">
       <span class="name">Vansh Tejnani</span>
     </a>
+    <div class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#socials">Socials</a>
+      <a href="#schedule">Schedule</a>
+    </div>
     <button id="theme-toggle" class="theme-toggle">🌙</button>
   </nav>
 
   <!-- HERO SECTION -->
   <section class="hero">
+    <video autoplay muted loop class="hero-bg">
+      <source src="assets/background.mp4" type="video/mp4">
+    </video>
     <div class="hero-content">
-      <img src="assets/profile.jpg" alt="Profile picture" class="profile-pic">
-      <h1 class="fade-up">Hi, I’m Vansh Tejnani</h1>
-      <p class="fade-up delay-1">Software Engineer • Full Stack • Problem Solver</p>
-      <div class="buttons fade-up delay-2">
-        <a href="#projects" class="btn">View Projects</a>
-        <a href="assets/resume.pdf" target="_blank" class="btn secondary">View Resume</a>
-        <a href="assets/resume.pdf" download class="btn secondary">Download Resume</a>
-      </div>
+      <img src="assets/profile.jpg" alt="Profile" class="profile-pic">
+      <h1 class="fade-up">Hi, I'm Vansh Tejnani</h1>
+      <p class="fade-up delay-1">Software Engineer • Creator • Innovator</p>
+      <a href="assets/resume.pdf" target="_blank" class="btn fade-up delay-2">View Resume</a>
     </div>
   </section>
 
-  <!-- PROJECTS SECTION -->
+  <!-- PROJECTS SECTION (Carousel) -->
   <section id="projects" class="projects fade-up">
     <h2 class="section-title">Projects</h2>
-    <div class="project-grid">
-      <div class="project-card fade-up delay-1">
-        <h3>Portfolio Website</h3>
-        <p>Personal portfolio showcasing projects, skills, and resume.</p>
-        <p class="tech">HTML • CSS • JavaScript</p>
-        <a href="https://github.com/yourusername/portfolio" target="_blank">View on GitHub</a>
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <div class="project-card" onclick="openModal('portfolio')">
+          <h3>Portfolio Website</h3>
+          <p>Modern portfolio showcasing my work and skills.</p>
+        </div>
+        <div class="project-card" onclick="openModal('todo')">
+          <h3>Todo App</h3>
+          <p>Task management app built with React.</p>
+        </div>
+        <div class="project-card" onclick="openModal('chat')">
+          <h3>Chat App</h3>
+          <p>Real-time messaging app with Node.js and Socket.io.</p>
+        </div>
       </div>
-      <div class="project-card fade-up delay-2">
-        <h3>Todo App</h3>
-        <p>Task management application with persistent storage.</p>
-        <p class="tech">React • LocalStorage</p>
-        <a href="https://github.com/yourusername/todo-app" target="_blank">View on GitHub</a>
-      </div>
-      <!-- Add more projects here -->
     </div>
   </section>
 
-  <!-- ABOUT SECTION -->
+  <!-- MODAL -->
+  <div id="project-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+      <a id="modal-link" href="#" target="_blank" class="btn">View on GitHub</a>
+    </div>
+  </div>
+
+  <!-- SKILLS/ABOUT CAROUSEL -->
   <section id="about" class="about fade-up">
-    <h2>About Me</h2>
+    <h2>Skills & Highlights</h2>
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <div class="skill-card">JavaScript</div>
+        <div class="skill-card">React</div>
+        <div class="skill-card">Node.js</div>
+        <div class="skill-card">Python</div>
+        <div class="skill-card">CSS & Design</div>
+      </div>
+    </div>
+    <p class="fade-up delay-1">I’m passionate about building sleek, efficient, and user-friendly applications. I enjoy solving complex problems and learning new technologies.</p>
+  </section>
+
+  <!-- SOCIALS SECTION -->
+  <section id="socials" class="socials fade-up">
+    <h2>Socials</h2>
     <p>
-      I’m an aspiring software engineer passionate about building clean, scalable, and user-friendly applications. I enjoy solving problems and continuously learning new technologies.
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a> •
+      <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a> •
+      <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
     </p>
   </section>
 
-  <!-- CONTACT SECTION -->
-  <section id="contact" class="contact fade-up">
-    <h2>Contact</h2>
-    <p>Email: your@email.com</p>
-    <p>
-      <a href="https://github.com/yourusername" target="_blank">GitHub</a> •
-      <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
-    </p>
+  <!-- SCHEDULE SECTION -->
+  <section id="schedule" class="schedule fade-up">
+    <h2>Upcoming Projects & Events</h2>
+    <ul class="timeline">
+      <li><span>Jan 2026:</span> Launch new project</li>
+      <li><span>Mar 2026:</span> Conference talk</li>
+      <li><span>Jun 2026:</span> Open source contribution</li>
+    </ul>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    © 2026 Vansh
+    © 2026 Vansh Tejnani. All rights reserved.
   </footer>
 
   <script src="script.js"></script>
