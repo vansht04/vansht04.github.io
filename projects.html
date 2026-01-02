@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Your Name</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo-container">
+      <img src="assets/logo.png" alt="Logo" class="logo">
+      <span class="name">Your Name</span>
+    </a>
+    <div class="nav-links">
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About Me</a>
+      <a href="socials.html">Socials</a>
+      <a href="schedule.html">Schedule</a>
+    </div>
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+  </nav>
+
+  <section class="projects fade-up">
+    <h2 class="section-title">Projects</h2>
+    <div class="carousel-wrapper">
+      <button class="scroll-btn left" onclick="scrollCarousel('projects', -1)">◀</button>
+      <div id="projects" class="carousel-container">
+        <div class="carousel-track">
+          <div class="project-card" onclick="openModal('portfolio')">
+            <h3>Portfolio Website</h3>
+            <p>Modern portfolio showcasing my work and skills.</p>
+          </div>
+          <div class="project-card" onclick="openModal('todo')">
+            <h3>Todo App</h3>
+            <p>Task management app built with React.</p>
+          </div>
+          <div class="project-card" onclick="openModal('chat')">
+            <h3>Chat App</h3>
+            <p>Real-time messaging app with Node.js and Socket.io.</p>
+          </div>
+        </div>
+      </div>
+      <button class="scroll-btn right" onclick="scrollCarousel('projects', 1)">▶</button>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="project-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+      <a id="modal-link" href="#" target="_blank" class="btn">View on GitHub</a>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 Your Name
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
